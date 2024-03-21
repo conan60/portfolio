@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conan60/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "dev"
+  ],
+  "author": "Malek GORCHENE",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/conan60/portfolio/issues"
+  },
+  "homepage": "https://github.com/conan60/portfolio#readme"
+}
