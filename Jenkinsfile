@@ -24,10 +24,10 @@ pipeline {
   }
   post {
     failure {
-      echo 'Processing failed'
+      echo 'Processing failed!'
     }
     success {
-      echo 'Processing succeeded'
+      echo 'Processing succeeded!'
     }
   }
 }
