@@ -1,18 +1,15 @@
-node {
-
-    stage('Make venv') {
-      
-        sh 'echo "Make venv"'
-      
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Build"'
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'echo "Test"'
+            }
+        }
     }
-    stage('Install dependencies') {
-      
-        sh 'echo "install deps ! "'
-    
-    }
-    stage('Run tests') {
-        sh 'echo "Run test"'
-      
-    }
-  
 }
