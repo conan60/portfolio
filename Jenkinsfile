@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Pre-cleanup') {
       steps {
-        sh 'echo "Hello"'<
+        sh 'echo "Hello from jenkinsfile"'<
       }
     }
     stage('Make venv') {
