@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Install dependencies') {
       steps {
-        sh 'echo "install deps !"'
+        sh 'echo "install deps ! "'
       }
     }
     stage('Run tests') {
