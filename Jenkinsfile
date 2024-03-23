@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build container') {
             steps {
-                sh 'docker build -t addressbook .' 
+                sh 'docker build . -t addressbook' 
             }
         }
         stage('Run container') {
