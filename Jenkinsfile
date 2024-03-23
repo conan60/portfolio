@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Run container') {
             steps {
-                echo 'docker run -it -p 80:3000 addressbook' 
+                echo 'docker run -d -p 80:3000 addressbook' 
             }
         }
     }
