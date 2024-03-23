@@ -1,12 +1,12 @@
-FROM node:17.9.1-alpine
+FROM node:18.19.1-alpine
 
 RUN mkdir -p /home/node/app
 
 WORKDIR /home/node/app
 
-COPY package.json ./
+COPY ./package.json ./
 
-RUN npm install --verbose --no-audit
+RUN npm install
 
 COPY . .
 
