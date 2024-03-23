@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Run container') {
             steps {
-                echo 'docker run -d -p 80:3000 portfolio' 
+                echo 'docker run -d -p 3000:80 portfolio' 
             }
         }
     }
