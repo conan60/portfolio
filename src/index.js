@@ -5,8 +5,6 @@
 // ReactDOM.render(<Home />, document.getElementById('root'));
 
 const http = require("http");
-
-const host = 'localhost';
 const port = 3000;
 
 const requestListener = function (req, res) {
@@ -17,5 +15,5 @@ const requestListener = function (req, res) {
 
 const server = http.createServer(requestListener);
 server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+    console.log(`Server is running on port:${port}`);
 });
