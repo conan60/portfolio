@@ -7,14 +7,9 @@ pipeline {
             }
         }
         stage('Run container') {
-            agent {
-                docker {
-                    image 'portfolio'
-                    reuseNode true
-                }
-            }
             steps {
-                sh 'npm start' 
+                sh 'docker stop portfolio'
+                sh 'docker run -d -p 80:3000 --name portfolio portfolio' 
             }
         }
     }
