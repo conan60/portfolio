@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build container') {
             steps {
-                sh 'docker build . -t addressbook' 
+                sh 'docker build . -t portfolio' 
             }
         }
         stage('Run container') {
             steps {
-                echo 'docker run -d -p 80:3000 addressbook' 
+                echo 'docker run -d -p 80:3000 portfolio' 
             }
         }
     }
