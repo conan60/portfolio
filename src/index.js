@@ -1,19 +1,13 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import Home from './Home';
+const express = require('express')
+const app = express()
+const port = 3000
 
-// ReactDOM.render(<Home />, document.getElementById('root'));
+app.use(express.static('build'))
 
-const http = require("http");
-const port = 3000;
+app.get('/api', (req, res) => {
+  res.send('Hello World!')
+})
 
-const requestListener = function (req, res) {
-    res.setHeader("Content-Type", "application/json");
-    res.writeHead(200);
-    res.end(`{"message": "Nostal aptonia Malek"}`);
-};
-
-const server = http.createServer(requestListener);
-server.listen(port, () => {
-    console.log(`Server is running on port:${port}`);
-});
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
