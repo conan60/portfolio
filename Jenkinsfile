@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build container') {
             steps {
-                sh 'docker rmi -f $(docker images -aq)'
+                sh 'docker image prune -a'
                 sh 'docker build . -t portfolio' 
             }
         }
