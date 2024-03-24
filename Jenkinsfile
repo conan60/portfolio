@@ -8,7 +8,9 @@ pipeline {
         }
         stage('Run container') {
             steps {
-                sh 'docker restart portfolio' 
+                sh 'docker stop portfolio'
+                sh 'docker rm portfolio'
+                sh 'docker run -d -p 80:3000 --name portfolio portfolio' 
             }
         }
     }
