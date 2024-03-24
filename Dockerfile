@@ -6,7 +6,7 @@ WORKDIR /home/node/app
 
 COPY ./package*.json ./
 
-CMD [ "npm", "install"]
+RUN npm install
 
 COPY . .
 
