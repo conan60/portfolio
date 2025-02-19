@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 app.get('/api', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello New World!')
 })
 
 app.listen(port, () => {
