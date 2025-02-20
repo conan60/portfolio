@@ -1,15 +1,22 @@
-FROM node:18.19.1-alpine
+FROM node:22.14.0-slim
 
-RUN mkdir -p /home/node/app
+# Create app directory
+WORKDIR /usr/src/app
 
-WORKDIR /home/node/app
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-COPY ./package*.json ./
+# Install app dependencies
+RUN npm ci
 
-RUN npm install
-
+# Bundle app source
 COPY . .
 
-EXPOSE 3000
+# Build the TypeScript files
+RUN npm run build
 
-CMD [ "node", "./src/index.js"]
+# Expose port 8080
+EXPOSE 8080
+
+# Start the app
+CMD npm run start
