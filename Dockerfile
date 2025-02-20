@@ -1,7 +1,9 @@
 FROM node:22.14.0-slim
 
+
+RUN mkdir -p /home/node/app
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /home/node/app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -16,7 +18,7 @@ COPY . .
 RUN npm run build
 
 # Expose port 8080
-EXPOSE 8080
+EXPOSE 3000
 
 # Start the app
 CMD npm run start
